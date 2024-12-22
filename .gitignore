@@ -30,6 +30,7 @@
 *.a
 *.lib
 
+test.cpp
 # Executables
 *.exe
 *.out

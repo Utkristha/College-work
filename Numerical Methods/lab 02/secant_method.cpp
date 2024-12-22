@@ -15,14 +15,20 @@ int main()
     cout<<"Enter two guesses: ";
     cin>>x>>x1;
 
+    while(func(x) - func(x1) == 0)
+    {
+        cout<<"Enter valid guess: ";
+        cin>>x>>x1;
+    }
+
     do
     {
         x2 = (x*func(x1) - x1*func(x))/(func(x1)-func(x));
         x = x1;
         x1 = x2;
         error = abs(x1 - x);
-    } while (error > 0.0001);
+    } while (error > 0.000001);
 
-    cout<<"The root is :"<<x1;
+    cout<<"The root is :"<<x2;
     return 0;
 }
